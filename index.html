@@ -130,6 +130,41 @@
   </section>
 
 
+<!-- Subject Driven Video Generation carousel -->
+<!-- <section class="hero teaser">
+      <div class="hero-body ">
+    <div class="container is-max-desktop">
+  
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay muted loop playsinline height="100%" src="static/videos/banner_video.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+        Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video. Here, Dreamix turns the eating monkey (left) to a dancing bear (right) given the prompt “A bear dancing and jumping to upbeat music, moving his whole body“.
+      </h2>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video2" autoplay muted loop playsinline height="100%" src="static/videos/img2vid_turtle.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+        Dreamix can create videos based on image and text inputs. In this example it is able to instill complex motion in a static image, adding a moving shark and making the turtle swim. In this case, visual fidelity to object location and background was preserved but the turtle direction was flipped.
+      </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="header-video3" autoplay muted loop playsinline height="100%"  src="static/videos/subj_driv_lifting.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          Given a small collection of images showing the same subject, Dreamix can generate new videos with the subject in motion. In this example, given a small number of images of the toy fireman, Dreamix is able to extract the visual features then animate it to lift weights while maintaining fidelity and temporal consistency.
+      </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End Subject Driven Video Generation carousel -->
+
+
+
   <!-- Teaser video 动图演示视频 展示模型使用方法及效果-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -241,12 +276,12 @@
   </section>
   <!-- End image carousel -->
 
-  <!-- Image carousel -->
+  <!-- Visual Results Carousel -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Experiment</h2>
-        <div id="results-carousel" class="carousel results-carousel">
+        <h2 class="title is-3">Visual Results</h2>
+        <div id="visual-carousel" class="carousel results-carousel">
           <div class="item">
             <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
               <img src="static/images/fig5.png" alt="Visual comparison between StableV2V and T3V2V"
@@ -259,32 +294,7 @@
               </h2>
             </div>
           </div>
-          <div class="item">
-            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-              <img src="static/images/tab1.png" alt="Subjective evaluation comparison"
-                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </div>
-            <div style="max-width: 950px; margin: 0 auto;">
-              <h2 class="subtitle has-text-centered">
-                <strong>Table 1:</strong> Comparison of subjective indicators. 
-                T3V2V significantly outperforms StableV2V across naturalness, consistency, and fluency metrics 
-                evaluated by both GPT-4 and human evaluators.
-              </h2>
-            </div>
-          </div>
-          <div class="item">
-            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-              <img src="static/images/tab2.png" alt="Objective evaluation comparison"
-                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            </div>
-            <div style="max-width: 950px; margin: 0 auto;">
-              <h2 class="subtitle has-text-centered">
-                <strong>Table 2:</strong> Comparison of objective indicators. 
-                T3V2V demonstrates superior performance with lower FVD scores and higher CLIP and DOVER scores, 
-                establishing quantitative evidence of our method's effectiveness.
-              </h2>
-            </div>
-          </div>
+          
           <div class="item">
             <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
               <img src="static/images/fig6.png" alt="Domain shift visualization during test time"
@@ -298,50 +308,97 @@
               </h2>
             </div>
           </div>
+
+          <!-- 添加补充材料 Figure 1 -->
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/graphs.jpg" alt="Supplementary visual results comparison"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                <strong>Supplementary Figure 1:</strong> Edited Video Results comparing StableV2V (up) and T3V2V (down). 
+                Three editing scenarios: red car transformation, goat replacement, and blackswann replacement, 
+                demonstrating superior object consistency and temporal coherence of our method.
+              </h2>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
   </section>
-  <!-- End image carousel -->
+  <!-- End Visual Results Carousel -->
 
+  <!-- Quantitative Evaluation Carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Quantitative Evaluation</h2>
+        <div id="tables-carousel" class="carousel results-carousel">
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/tab1.png" alt="Subjective evaluation comparison"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                <strong>Table 1:</strong> Comparison of subjective indicators. 
+                T3V2V significantly outperforms StableV2V across naturalness, consistency, and fluency metrics 
+                evaluated by both GPT-4 and human evaluators.
+              </h2>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/tab2.png" alt="Objective evaluation comparison"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                <strong>Table 2:</strong> Comparison of objective indicators. 
+                T3V2V demonstrates superior performance with lower FVD scores and higher CLIP and DOVER scores, 
+                establishing quantitative evidence of our method's effectiveness.
+              </h2>
+            </div>
+          </div>
+          
+          <!-- 补充材料 Table 1 - 完整主观指标 -->
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/supp-tab1.png" alt="Complete subjective evaluation results"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                <strong>Supplementary Table 1:</strong> Complete subjective evaluation across all target domains 
+                (Car, Blackswann, Boat, Camel, Elephant, Goat). Shows consistent improvements of 3.53%-9.41% in naturalness, 
+                5.43%-13.41% in consistency, and 2.33%-7.50% in fluency.
+              </h2>
+            </div>
+          </div>
 
-
-  <!-- Image carousel -->
-  <!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Ablation Study</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/ablation_generation_types.png" alt="MY ALT TEXT" style="width: 950px; height: auto; margin-top: 30px;"/>
+          <!-- 补充材料 Table 2 - 完整客观指标 -->
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/supp-tab2.png" alt="Complete objective evaluation results"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                <strong>Supplementary Table 2:</strong> Complete objective evaluation across all target domains. 
+                Demonstrates FVD improvements of 3.87%-10.30%, CLIP Score gains of 0.97%-5.02%, 
+                and consistent DOVER improvements of 0.43%-0.79%.
+              </h2>
+            </div>
           </div>
-          <h2 class="subtitle has-text-centered">
-            First image description.
-          </h2>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/ablation_loss.png" alt="MY ALT TEXT" style="width: 950px; height: auto; margin-top: 30px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Second image description.
-          </h2>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/ablation_generation_condition.png" alt="MY ALT TEXT" style="width: 950px; height: auto; margin-top: 30px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Third image description.
-          </h2>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
-  <!-- End image carousel -->
-
+  </section>
+  <!-- End Quantitative Evaluation Carousel -->
 
 
 
